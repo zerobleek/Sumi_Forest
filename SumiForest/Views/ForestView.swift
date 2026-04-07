@@ -50,7 +50,7 @@ struct ForestView: View {
                             .font(Theme.Typography.caption)
                         Text("\(viewModel.treesGrownToday(completedTodos)) today")
                             .font(Theme.Typography.small)
-                            .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                            .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                     }
                 }
             }
@@ -82,7 +82,7 @@ struct ForestEmptyStateView: View {
                 
                 Text("Complete tasks to grow trees")
                     .font(Theme.Typography.body)
-                    .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                    .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                     .multilineTextAlignment(.center)
             }
         }
@@ -118,13 +118,15 @@ struct TreeDetailView: View {
                             .foregroundStyle(Theme.Colors.foreground(for: colorScheme))
                     }
                     
-                    Divider()
+                    Rectangle()
+                        .fill(Theme.Colors.divider(for: colorScheme))
+                        .frame(height: Theme.Layout.borderWidth)
                     
                     // Task details
                     VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                         Text("Task")
                             .font(Theme.Typography.caption)
-                            .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                            .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                         
                         Text(tree.todoItem.title)
                             .font(Theme.Typography.body)
@@ -135,7 +137,7 @@ struct TreeDetailView: View {
                         VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                             Text("Note")
                                 .font(Theme.Typography.caption)
-                                .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                                .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                             
                             Text(note)
                                 .font(Theme.Typography.body)
@@ -147,7 +149,7 @@ struct TreeDetailView: View {
                         VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                             Text("Completed")
                                 .font(Theme.Typography.caption)
-                                .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                                .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                             
                             Text(formatDate(completedAt))
                                 .font(Theme.Typography.body)
@@ -159,7 +161,7 @@ struct TreeDetailView: View {
                     VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                         Text("Priority")
                             .font(Theme.Typography.caption)
-                            .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                            .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                         
                         HStack {
                             Circle()
@@ -175,7 +177,11 @@ struct TreeDetailView: View {
                 .padding(Theme.Spacing.md)
                 .background(
                     RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
-                        .fill(colorScheme == .dark ? Theme.Colors.inkLight.opacity(0.2) : Color.white)
+                        .fill(Theme.Colors.surface(for: colorScheme))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
+                                .stroke(Theme.Colors.divider(for: colorScheme), lineWidth: Theme.Layout.borderWidth)
+                        )
                 )
                 
                 Spacer()

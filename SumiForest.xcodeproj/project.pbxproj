@@ -27,6 +27,9 @@
 		BB0007 /* ForestSpriteKitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0008 /* ForestSpriteKitScene.swift */; };
 		BB0009 /* SpriteKitForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0010 /* SpriteKitForestView.swift */; };
 		BB0011 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0012 /* SpriteKit.framework */; };
+		CC0001 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002 /* ThemeManager.swift */; };
+		CC0003 /* InkRevealOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004 /* InkRevealOverlay.swift */; };
+		CC0005 /* PaperTextureOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0006 /* PaperTextureOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		BB0008 /* ForestSpriteKitScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestSpriteKitScene.swift; sourceTree = "<group>"; };
 		BB0010 /* SpriteKitForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitForestView.swift; sourceTree = "<group>"; };
 		BB0012 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		CC0002 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CC0004 /* InkRevealOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkRevealOverlay.swift; sourceTree = "<group>"; };
+		CC0006 /* PaperTextureOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperTextureOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,8 @@
 			children = (
 				AA0020 /* TodoRowView.swift */,
 				BB0002 /* TreeView.swift */,
+				CC0004 /* InkRevealOverlay.swift */,
+				CC0006 /* PaperTextureOverlay.swift */,
 				BB0013 /* SpriteKit */,
 			);
 			path = Components;
@@ -141,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0022 /* Theme.swift */,
+				CC0002 /* ThemeManager.swift */,
 				AA0028 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -269,6 +278,9 @@
 				BB0005 /* TreeNodes_Implementation.swift in Sources */,
 				BB0007 /* ForestSpriteKitScene.swift in Sources */,
 				BB0009 /* SpriteKitForestView.swift in Sources */,
+				CC0001 /* ThemeManager.swift in Sources */,
+				CC0003 /* InkRevealOverlay.swift in Sources */,
+				CC0005 /* PaperTextureOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

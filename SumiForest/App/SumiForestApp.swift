@@ -11,6 +11,7 @@ import SwiftData
 /// Main app entry point with SwiftData model container
 @main
 struct SumiForestApp: App {
+    @State private var themeManager = ThemeManager()
     let modelContainer: ModelContainer
     
     init() {
@@ -34,6 +35,7 @@ struct SumiForestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(themeManager)
         }
         .modelContainer(modelContainer)
     }

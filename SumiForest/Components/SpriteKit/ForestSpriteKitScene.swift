@@ -90,7 +90,7 @@ final class ForestSpriteKitScene: SKScene {
             ctx.fill(CGRect(origin: .zero, size: texSize))
 
             // Add subtle noise grain
-            let grainAlpha: CGFloat = isDark ? 0.05 : 0.03
+            let grainAlpha: CGFloat = isDark ? Theme.Texture.grainAlphaDark : Theme.Texture.grainAlphaLight
             var rng = SeededRandom(seed: 42)
             for x in stride(from: 0, to: Int(texSize.width), by: 2) {
                 for y in stride(from: 0, to: Int(texSize.height), by: 2) {

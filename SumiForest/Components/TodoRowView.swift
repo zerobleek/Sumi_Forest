@@ -25,7 +25,7 @@ struct TodoRowView: View {
                         .stroke(
                             item.isCompleted
                             ? Theme.Colors.success
-                            : Theme.Colors.foreground(for: colorScheme).opacity(0.3),
+                            : Theme.Colors.divider(for: colorScheme),
                             lineWidth: 2
                         )
                         .frame(width: 24, height: 24)
@@ -50,7 +50,7 @@ struct TodoRowView: View {
                     .font(Theme.Typography.body)
                     .foregroundStyle(
                         item.isCompleted
-                        ? Theme.Colors.foreground(for: colorScheme).opacity(0.5)
+                        ? Theme.Colors.secondaryText(for: colorScheme)
                         : Theme.Colors.foreground(for: colorScheme)
                     )
                     .strikethrough(item.isCompleted)
@@ -59,7 +59,7 @@ struct TodoRowView: View {
                 if let note = item.note, !note.isEmpty {
                     Text(note)
                         .font(Theme.Typography.caption)
-                        .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                        .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                         .lineLimit(2)
                 }
                 
@@ -75,7 +75,7 @@ struct TodoRowView: View {
                         .foregroundStyle(
                             isOverdue(dueAt) && !item.isCompleted
                             ? Theme.Colors.error
-                            : Theme.Colors.foreground(for: colorScheme).opacity(0.5)
+                            : Theme.Colors.secondaryText(for: colorScheme)
                         )
                     }
                     
@@ -94,7 +94,11 @@ struct TodoRowView: View {
         .padding(Theme.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
-                .fill(colorScheme == .dark ? Theme.Colors.inkLight.opacity(0.2) : Color.white)
+                .fill(Theme.Colors.surface(for: colorScheme))
+                .overlay(
+                    RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
+                        .stroke(Theme.Colors.divider(for: colorScheme), lineWidth: Theme.Layout.borderWidth)
+                )
         )
         .swipeActions(edge: .trailing, allowsFullSwipe: false) {
             Button(role: .destructive, action: onDelete) {

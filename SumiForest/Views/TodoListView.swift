@@ -47,7 +47,8 @@ struct TodoListView: View {
             ZStack {
                 Theme.Colors.background(for: colorScheme)
                     .ignoresSafeArea()
-                
+                    .overlay { PaperTextureOverlay().ignoresSafeArea() }
+
                 VStack(spacing: 0) {
                     // Quick Add Field
                     HStack {
@@ -63,11 +64,14 @@ struct TodoListView: View {
                                 viewModel.createFromQuickAdd()
                             }
                     }
-                    .padding(Theme.Spacing.md)
-                    .background(
-                        RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
-                            .fill(colorScheme == .dark ? Theme.Colors.inkLight.opacity(0.2) : Color.white)
-                    )
+                    .padding(.horizontal, Theme.Spacing.md)
+                    .padding(.vertical, Theme.Spacing.sm)
+                    .overlay(alignment: .bottom) {
+                        Rectangle()
+                            .fill(Theme.Colors.divider(for: colorScheme))
+                            .frame(height: Theme.Layout.borderWidth)
+                            .padding(.horizontal, Theme.Spacing.md)
+                    }
                     .padding(.horizontal, Theme.Spacing.md)
                     .padding(.top, Theme.Spacing.sm)
                     
@@ -94,7 +98,7 @@ struct TodoListView: View {
                     HStack {
                         Text("Sort by:")
                             .font(Theme.Typography.caption)
-                            .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                            .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                         
                         Picker("Sort", selection: $viewModel.selectedSort) {
                             ForEach(TodoSort.allCases, id: \.self) { sort in
@@ -201,11 +205,11 @@ struct EmptyStateView: View {
         VStack(spacing: Theme.Spacing.lg) {
             Image(systemName: "leaf")
                 .font(.system(size: 64))
-                .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.3))
+                .foregroundStyle(Theme.Colors.divider(for: colorScheme))
             
             Text("Write one brushstroke at a time")
                 .font(Theme.Typography.headline)
-                .foregroundStyle(Theme.Colors.foreground(for: colorScheme).opacity(0.6))
+                .foregroundStyle(Theme.Colors.secondaryText(for: colorScheme))
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -234,10 +238,13 @@ struct FilterChip: View {
                 .padding(.vertical, Theme.Spacing.sm)
                 .background(
                     RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
-                        .fill(
-                            isSelected
-                            ? Theme.Colors.accent
-                            : (colorScheme == .dark ? Theme.Colors.inkLight.opacity(0.2) : Color.white)
+                        .fill(isSelected ? Theme.Colors.accent : Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: Theme.Layout.cornerRadius)
+                                .stroke(
+                                    isSelected ? Color.clear : Theme.Colors.divider(for: colorScheme),
+                                    lineWidth: Theme.Layout.borderWidth
+                                )
                         )
                 )
         }
