@@ -25,7 +25,7 @@ struct TodoEditorView: View {
     
     init(
         item: TodoTask?,
-        onCreate: @escaping (String, String?, Date?, Int, [String]) -> Void,
+        onCreate: @escaping (String, String?, Date?, Priority, [String]) -> Void,
         onUpdate: @escaping (TodoTask) -> Void
     ) {
         self.item = item

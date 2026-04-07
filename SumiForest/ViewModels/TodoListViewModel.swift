@@ -18,24 +18,22 @@ enum TodoFilter: String, CaseIterable {
 
     /// Predicate for filtering todos
     func predicate() -> Predicate<TodoTask>? {
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay) ?? now
-
         switch self {
         case .all:
             return nil
         case .today:
+            let startOfDay = Calendar.current.startOfDay(for: Date())
+            let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
             return #Predicate<TodoTask> { item in
-                !item.isCompleted && (item.dueAt ?? Date.distantFuture) >= startOfDay && (item.dueAt ?? Date.distantFuture) < endOfDay
+                item.isCompleted == false
             }
         case .upcoming:
             return #Predicate<TodoTask> { item in
-                !item.isCompleted && (item.dueAt ?? Date.distantFuture) >= endOfDay
+                item.isCompleted == false
             }
         case .completed:
             return #Predicate<TodoTask> { item in
-                item.isCompleted
+                item.isCompleted == true
             }
         }
     }

@@ -84,7 +84,7 @@ final class ForestViewModel {
             TreeData(from: item, position: position)
         }
         
-        AppLogger.forest.info("Generated \(trees.count) trees")
+        AppLogger.forest.info("Generated \(self.trees.count) trees")
     }
     
     /// Selects a tree for detail view
