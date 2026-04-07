@@ -11,7 +11,7 @@
 		AA0003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0004 /* ContentView.swift */; };
 		AA0005 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0006 /* TodoTask.swift */; };
 		AA0007 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0008 /* AppError.swift */; };
-		AA0009 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0010 /* TodoViewModel.swift */; };
+		AA0009 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0010 /* TodoListViewModel.swift */; };
 		AA0011 /* ForestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0012 /* ForestViewModel.swift */; };
 		AA0013 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* TodoListView.swift */; };
 		AA0015 /* ForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0016 /* ForestView.swift */; };
@@ -34,7 +34,7 @@
 		AA0004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA0006 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 		AA0008 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		AA0010 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		AA0010 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		AA0012 /* ForestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewModel.swift; sourceTree = "<group>"; };
 		AA0014 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		AA0016 /* ForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		AA0035 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				AA0010 /* TodoViewModel.swift */,
+				AA0010 /* TodoListViewModel.swift */,
 				AA0012 /* ForestViewModel.swift */,
 			);
 			path = ViewModels;
@@ -126,17 +126,6 @@
 				BB0013 /* SpriteKit */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		BB0013 /* SpriteKit */ = {
-			isa = PBXGroup;
-			children = (
-				BB0004 /* TreeNode.swift */,
-				BB0006 /* TreeNodes_Implementation.swift */,
-				BB0008 /* ForestSpriteKitScene.swift */,
-				BB0010 /* SpriteKitForestView.swift */,
-			);
-			path = SpriteKit;
 			sourceTree = "<group>";
 		};
 		AA0038 /* Services */ = {
@@ -172,6 +161,17 @@
 				AA0030 /* SumiForest.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BB0013 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB0004 /* TreeNode.swift */,
+				BB0006 /* TreeNodes_Implementation.swift */,
+				BB0008 /* ForestSpriteKitScene.swift */,
+				BB0010 /* SpriteKitForestView.swift */,
+			);
+			path = SpriteKit;
 			sourceTree = "<group>";
 		};
 		BB0014 /* Frameworks */ = {
@@ -210,7 +210,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					AA0042 = {
 						CreatedOnToolsVersion = 15.0;
@@ -255,7 +255,7 @@
 				AA0003 /* ContentView.swift in Sources */,
 				AA0005 /* TodoTask.swift in Sources */,
 				AA0007 /* AppError.swift in Sources */,
-				AA0009 /* TodoViewModel.swift in Sources */,
+				AA0009 /* TodoListViewModel.swift in Sources */,
 				AA0011 /* ForestViewModel.swift in Sources */,
 				AA0013 /* TodoListView.swift in Sources */,
 				AA0015 /* ForestView.swift in Sources */,
@@ -313,10 +313,11 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P7Z8J69894;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -351,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sumiforest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -397,10 +399,11 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P7Z8J69894;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -428,6 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sumiforest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
