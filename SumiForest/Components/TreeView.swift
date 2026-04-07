@@ -39,17 +39,12 @@ struct TreeView: View {
     }
     
     /// Returns the shape for a given tree species
-    @ViewBuilder
-    private func treeShape(for species: TreeSpecies) -> some Shape {
+    private func treeShape(for species: TreeSpecies) -> AnyShape {
         switch species {
-        case .bamboo:
-            BambooShape()
-        case .maple:
-            MapleShape()
-        case .pine:
-            PineShape()
-        case .sakura:
-            SakuraShape()
+        case .bamboo: AnyShape(BambooShape())
+        case .maple: AnyShape(MapleShape())
+        case .pine: AnyShape(PineShape())
+        case .sakura: AnyShape(SakuraShape())
         }
     }
     
