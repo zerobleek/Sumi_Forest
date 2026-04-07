@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0001 /* SumiForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0002 /* SumiForestApp.swift */; };
+		AA0003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0004 /* ContentView.swift */; };
+		AA0005 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0006 /* TodoTask.swift */; };
+		AA0007 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0008 /* AppError.swift */; };
+		AA0009 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0010 /* TodoViewModel.swift */; };
+		AA0011 /* ForestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0012 /* ForestViewModel.swift */; };
+		AA0013 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0014 /* TodoListView.swift */; };
+		AA0015 /* ForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0016 /* ForestView.swift */; };
+		AA0017 /* TodoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0018 /* TodoEditorView.swift */; };
+		AA0019 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0020 /* TodoRowView.swift */; };
+		AA0021 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0022 /* Theme.swift */; };
+		AA0023 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0024 /* Haptics.swift */; };
+		AA0025 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0026 /* Logger.swift */; };
+		AA0027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0028 /* Assets.xcassets */; };
+		BB0001 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0002 /* TreeView.swift */; };
+		BB0003 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0004 /* TreeNode.swift */; };
+		BB0005 /* TreeNodes_Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0006 /* TreeNodes_Implementation.swift */; };
+		BB0007 /* ForestSpriteKitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0008 /* ForestSpriteKitScene.swift */; };
+		BB0009 /* SpriteKitForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0010 /* SpriteKitForestView.swift */; };
+		BB0011 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0012 /* SpriteKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0002 /* SumiForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumiForestApp.swift; sourceTree = "<group>"; };
+		AA0004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0006 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
+		AA0008 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		AA0010 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		AA0012 /* ForestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewModel.swift; sourceTree = "<group>"; };
+		AA0014 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		AA0016 /* ForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestView.swift; sourceTree = "<group>"; };
+		AA0018 /* TodoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEditorView.swift; sourceTree = "<group>"; };
+		AA0020 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
+		AA0022 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AA0024 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		AA0026 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		AA0028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0030 /* SumiForest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SumiForest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0002 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		BB0004 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		BB0006 /* TreeNodes_Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodes_Implementation.swift; sourceTree = "<group>"; };
+		BB0008 /* ForestSpriteKitScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestSpriteKitScene.swift; sourceTree = "<group>"; };
+		BB0010 /* SpriteKitForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitForestView.swift; sourceTree = "<group>"; };
+		BB0012 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB0011 /* SpriteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0032 /* SumiForest */ = {
+			isa = PBXGroup;
+			children = (
+				AA0033 /* App */,
+				AA0034 /* Models */,
+				AA0035 /* ViewModels */,
+				AA0036 /* Views */,
+				AA0037 /* Components */,
+				AA0038 /* Services */,
+				AA0039 /* Resources */,
+				AA0029 /* Info.plist */,
+			);
+			path = SumiForest;
+			sourceTree = "<group>";
+		};
+		AA0033 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA0002 /* SumiForestApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA0034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0006 /* TodoTask.swift */,
+				AA0008 /* AppError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0035 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA0010 /* TodoViewModel.swift */,
+				AA0012 /* ForestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA0036 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0004 /* ContentView.swift */,
+				AA0014 /* TodoListView.swift */,
+				AA0016 /* ForestView.swift */,
+				AA0018 /* TodoEditorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0037 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AA0020 /* TodoRowView.swift */,
+				BB0002 /* TreeView.swift */,
+				BB0013 /* SpriteKit */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BB0013 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB0004 /* TreeNode.swift */,
+				BB0006 /* TreeNodes_Implementation.swift */,
+				BB0008 /* ForestSpriteKitScene.swift */,
+				BB0010 /* SpriteKitForestView.swift */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		AA0038 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0024 /* Haptics.swift */,
+				AA0026 /* Logger.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0039 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA0022 /* Theme.swift */,
+				AA0028 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA0040 = {
+			isa = PBXGroup;
+			children = (
+				AA0032 /* SumiForest */,
+				BB0014 /* Frameworks */,
+				AA0041 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0030 /* SumiForest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB0014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB0012 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0042 /* SumiForest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0043 /* Build configuration list for PBXNativeTarget "SumiForest" */;
+			buildPhases = (
+				AA0044 /* Sources */,
+				AA0031 /* Frameworks */,
+				AA0045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SumiForest;
+			productName = SumiForest;
+			productReference = AA0030 /* SumiForest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA0042 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0047 /* Build configuration list for PBXProject "SumiForest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0040;
+			productRefGroup = AA0041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0042 /* SumiForest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0027 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0001 /* SumiForestApp.swift in Sources */,
+				AA0003 /* ContentView.swift in Sources */,
+				AA0005 /* TodoTask.swift in Sources */,
+				AA0007 /* AppError.swift in Sources */,
+				AA0009 /* TodoViewModel.swift in Sources */,
+				AA0011 /* ForestViewModel.swift in Sources */,
+				AA0013 /* TodoListView.swift in Sources */,
+				AA0015 /* ForestView.swift in Sources */,
+				AA0017 /* TodoEditorView.swift in Sources */,
+				AA0019 /* TodoRowView.swift in Sources */,
+				AA0021 /* Theme.swift in Sources */,
+				AA0023 /* Haptics.swift in Sources */,
+				AA0025 /* Logger.swift in Sources */,
+				BB0001 /* TreeView.swift in Sources */,
+				BB0003 /* TreeNode.swift in Sources */,
+				BB0005 /* TreeNodes_Implementation.swift in Sources */,
+				BB0007 /* ForestSpriteKitScene.swift in Sources */,
+				BB0009 /* SpriteKitForestView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA0048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SumiForest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sumi Forest";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumiforest.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0049 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SumiForest/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sumi Forest";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumiforest.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0043 /* Build configuration list for PBXNativeTarget "SumiForest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0048 /* Debug */,
+				AA0049 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0047 /* Build configuration list for PBXProject "SumiForest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0048 /* Debug */,
+				AA0049 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA0046 /* Project object */;
+}
